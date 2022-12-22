@@ -1,0 +1,22 @@
+.card-container {
+
+   .header {
+      margin-top: 31px;
+      display: flex;
+      font-weight: 700;
+      font-size: 16px;
+      border-bottom: 0;
+
+      .header-tab {
+         padding: 16px 32px 16px 32px;
+         background-color: #212121;
+         color: #6b6b6b;
+         cursor: pointer;
+      }
+
+      .header-tab-selected {
+         background-color: #171717;
+         color: #27AE60;
+      }
+   }
+}

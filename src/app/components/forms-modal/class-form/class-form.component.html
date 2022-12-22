@@ -1,0 +1,43 @@
+<div class="modal-container">
+   <header fxLayout="row" fxLayouAlign="space-between center">
+      <h3 fxFlex>Register Class</h3>
+      <mat-icon (click)="fecharModal()">close</mat-icon>
+   </header>
+   <main>
+      <form fxLayout="column" [formGroup]="modalForm" fxLayoutGap="6px">
+         <div fxLayout="row" fxLayoutGap="14px">
+            <mat-form-field appearance="outline" fxFlex="70">
+               <mat-label>Name</mat-label>
+               <input matInput type="text" formControlName="name" />
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" fxFlex="30">
+               <mat-label>Code</mat-label>
+               <input matInput type="text" formControlName="code" />
+            </mat-form-field>
+         </div>
+         <div fxLayout="row" fxLayoutGap="14px">
+            <mat-form-field appearance="outline" fxFlex="50">
+               <mat-label>Representative</mat-label>
+               <input matInput type="text" formControlName="representative" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="25">
+               <mat-label>Start Date</mat-label>
+               <input matInput type="date" formControlName="startDate" />
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" fxFlex="25">
+               <mat-label>End Date</mat-label>
+               <input matInput type="date" formControlName="endDate" />
+            </mat-form-field>
+         </div>
+
+         <div fxFlex fxLayoutAlign="end">
+            <button type="button" [disabled]="!modalForm.valid" mat-raised-button class="button" (click)="saveClass()">
+               <mat-icon>check</mat-icon> {{ !classId ? 'Cadastrar' : 'Editar' }}
+            </button>
+         </div>
+      </form>
+   </main>
+</div>

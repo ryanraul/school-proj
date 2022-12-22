@@ -1,0 +1,125 @@
+{
+  "schools": [
+    {
+      "id": 1,
+      "name": "School Raul R. D.",
+      "email": "schoolRD@email.com",
+      "phone": "+55 15 99830-2012",
+      "zipCode": "18560-000",
+      "street": "R. Horacio Hugo de Moura",
+      "state": "SP",
+      "district": "Jd. Santa Cruz",
+      "city": "Ipero",
+      "classes": [
+        {
+          "id": 1,
+          "code": "ClA2022",
+          "name": "Class A",
+          "representative_id": 1001,
+          "startDate": "01-01-2022",
+          "endDate": "01-01-2023",
+          "students": [
+            {
+              "id": 1,
+              "enrollment": "123ABC",
+              "name": "Raul Ryan",
+              "birthDate": "01-01-2001",
+              "zipCode": "18560-000",
+              "street": "Rual Jardim Irene",
+              "state": "SP",
+              "district": "Vila Helena",
+              "city": "Ipero",
+              "phone": "+55 (15) 11111-1111",
+              "email": "raul@email.com"
+            },
+            {
+              "id": 2,
+              "enrollment": "123ABC",
+              "name": "Deaque Silva",
+              "birthDate": "30-12-2001",
+              "zipCode": "18560-000",
+              "street": "Rual Novo Horizonte",
+              "state": "SP",
+              "district": "Jardim Leopoldo",
+              "city": "Ipero",
+              "phone": "+55 (15) 41241-3123",
+              "email": "dsilva@email.com"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "code": "ClA2023",
+          "name": "Class B",
+          "representative_id": 1001,
+          "startDate": "01-01-2022",
+          "endDate": "01-01-2024",
+          "students": [
+            {
+              "id": 3,
+              "enrollment": "123ABC",
+              "name": "Renato Silva",
+              "birthDate": "30-12-2001",
+              "zipCode": "18560-000",
+              "street": "Rual Novo Horizonte",
+              "state": "SP",
+              "district": "Jardim Leopoldo",
+              "city": "Ipero",
+              "phone": "+55 (15) 12312-1231",
+              "email": "renato@email.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Deaque School",
+      "email": "schoolRD@email.com",
+      "phone": "+55 11 99999-9999",
+      "zipCode": "18560-000",
+      "street": "R. Cizino Dias",
+      "state": "SP",
+      "district": "Jd. Vitorino",
+      "complement": "Casa",
+      "city": "Ipero",
+      "classes": [
+        {
+          "id": 3,
+          "code": "C-1",
+          "name": "Class 1",
+          "representative_id": 1002,
+          "startDate": "01-01-2022",
+          "endDate": "01-01-2023"
+        },
+        {
+          "id": 4,
+          "code": "C-2",
+          "name": "Class 2",
+          "representative_id": 1002,
+          "startDate": "01-01-2022",
+          "endDate": "01-01-2023"
+        },
+        {
+          "id": 5,
+          "code": "C-3",
+          "name": "Class 3",
+          "representative_id": 1002,
+          "startDate": "01-01-2022",
+          "endDate": "01-01-2023"
+        }
+      ]
+    },
+    {
+      "name": "Teste",
+      "email": "teste@email.com",
+      "phone": "1234124124124",
+      "zipCode": "Teste",
+      "street": "Teste",
+      "state": "Teste",
+      "district": "Teste",
+      "city": "Teste",
+      "id": 3
+    }
+  ]
+}

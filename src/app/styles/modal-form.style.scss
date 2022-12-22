@@ -1,0 +1,71 @@
+.modal-container {
+   width: 700px;
+   background-color: hsl(0, 0%, 6%);
+   border: 1px solid #333333;
+   color: #fff;
+   padding: 0px 14px;
+
+   header {
+      height: 59px;
+      align-items: center;
+      padding: 15px;
+      color: #fff;      
+   }
+
+    header > mat-icon {
+      cursor: pointer;
+      
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+   }
+
+   main{
+      padding: 15px;
+      
+      h6 {color: #000;}
+
+      .mat-label{
+         font-size: 12px;
+         font-weight: 500;
+      }
+      
+      .mat-raised-button {
+         font-size: 12px;
+         color: #fff;
+         height: 40px;
+         width: 140px;
+      }
+
+      .button { background: #27AE60; }
+
+      .mat-raised-button:disabled {
+         background: #6b6b6b !important;
+      }
+   }
+}
+
+::ng-deep .mat-dialog-container {
+   padding: 0 !important;
+}
+
+::ng-deep.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+   color: #27AE60;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+   color: #27AE60 !important;
+}
+
+::ng-deep .mat-form-field-label {
+   color: #6b6b6b;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+   color: #6b6b6b;
+}
+::ng-deep .mat-form-field-ripple {
+   background-color: #fff !important;
+}
+ 

@@ -1,0 +1,26 @@
+<mat-grid-list cols="3" rowHeight="fit" gutterSize="10px" [style.height]="'240px'">
+   <mat-grid-tile *ngFor="let school of schools">
+      <div class="card" fxLayout="column" (click)="redirectToSchoolInfo(school.id)">
+         <div fxFlex="60" fxLayout="row" fxLayoutAlign="center center" class="card-header">
+            <div class="title">{{ school.name }}</div>
+            <div fxFlex></div>
+            <mat-icon [ngStyle]="{'color':'white'}">school</mat-icon>
+         </div>
+         <div fxLayout="column"  fxLayoutAlign="start start" class="card-content">
+            <p><b>Phone: </b> {{ school.phone }}</p>
+            <p><b>Email: </b> {{ school.email }}</p>
+            <p><b>Address: </b> {{ school.street }} - {{ school.district }}</p>
+         </div>
+         <div fxFlex="20" fxLayout="row" fxLayoutAlign="center end" fxLayoutGap="16px" class="card-footer" fxLayoutAlign="center end">
+            <div fxLayout="row" fxLayoutGap="5px" class="item-footer" fxLayoutAlign="center center" matTooltip="Total Classes">
+               <mat-icon>class</mat-icon>
+               <h3>{{ !school.classes ? 0 : school.classes.length }}</h3>
+            </div>
+            <div fxLayout="row" fxLayoutGap="5px" class="item-footer" fxLayoutAlign="center center" matTooltip="Total Students">
+               <mat-icon>group</mat-icon>
+               <h3>{{ getStudentsQuantity(school) }}</h3>
+            </div>
+         </div>
+      </div>
+   </mat-grid-tile>
+</mat-grid-list>

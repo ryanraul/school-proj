@@ -1,0 +1,72 @@
+.info-container {
+   padding: 20px 20px;
+   margin: 0 10%;
+   background-color: #212121;
+   border: 1px solid #333333;
+   color: #fff;
+
+   .info-header {
+      padding: 0px 20px;
+      margin-bottom: 30px;
+      mat-icon {
+         font-size: 85px;
+         width: 85px;
+         height: 85px;
+      }
+   }
+
+   .school-info {
+      margin-right: 65px;
+
+      table {
+         th {
+            text-align: left;
+            padding-right: 20px;
+            font-weight: 500;
+         }
+   
+         td {
+            color: #6b6b6b;
+         }
+      }
+   
+   }
+
+   .school-actions {
+      button {
+         background-color: #171717;
+         font-weight: 500;
+         border: 1px solid #fff;
+         color: #fff;
+         height: 36px;
+      }
+
+      .mat-raised-button:disabled {
+         border: 1px solid #6b6b6b;
+         color: #6b6b6b;
+      }
+
+      .button-inactivate:hover {
+         border: 1px solid #f44336;
+         color: #f44336;
+      }
+
+      button:hover {
+         border: 1px solid #27AE60;
+         color: #27AE60;
+      }
+
+      mat-icon {
+         font-size: 26px;
+         width: 26px;
+         height: 26px;
+      }
+   }
+
+   .content {
+      width: 100%;
+      
+   }
+
+
+}

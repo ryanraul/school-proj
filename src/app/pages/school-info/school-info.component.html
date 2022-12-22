@@ -1,0 +1,61 @@
+<div class="info-container" fxLayout="column">
+   <div fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="center center" class="info-header">
+      <div fxLayout="column" fxLayoutGap="22px" fxLayoutAlign="center center">
+         <div fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="center center">
+            <mat-icon [ngStyle]="{'color':'white'}">school</mat-icon>
+            <h2>{{ school.name }}</h2>
+         </div>
+         <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px" class="school-actions">
+            <button mat-raised-button matTooltip="Add Class" class="button" (click)="openClassFormModal()">
+               <mat-icon>note_add</mat-icon>  
+            </button>
+            <button mat-raised-button matTooltip="Add Student" [disabled]="!school.classes" class="button" (click)="openStudentFormModal()">
+               <mat-icon>person_add</mat-icon>  
+            </button>
+            <button mat-raised-button matTooltip="Inactivate" class="button button-inactivate">
+               <mat-icon>block</mat-icon> 
+            </button>
+         </div>
+      </div>
+      <div fxFlex></div>
+      <div class="school-info">
+         <table>
+            <tr>
+               <th>Address: </th>
+               <td>{{ school.street }} - {{ school.district }}</td>
+            </tr>
+            <tr>
+               <th>Zip Code: </th>
+               <td>{{ school.zipCode }}</td>
+            </tr>
+            <tr>
+               <th>City/State: </th>
+               <td>{{ school.city }}, {{ school.state }}</td>
+            </tr>
+            <tr>
+               <th>E-mail:</th>
+               <td>{{ school.email }}</td>
+            </tr>
+            <tr>
+               <th>Phone:</th>
+               <td>{{ school.phone }}</td>
+            </tr>
+            <tr>
+               <th>Total Class:</th>
+               <td>{{ !school.classes ? 0 : school.classes.length }}</td>
+            </tr>
+            <tr>
+               <th>Total Students:</th>
+               <td>{{ !school.classes ? 0 : getStudents().length }}</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+   <div class="tabs">
+      <app-card-tabs [itensTab]="itensTab" (tabSelecionadoEvent)="alterarTab($event)"></app-card-tabs>
+   </div>
+   <div class="content" fxFlex >
+      <app-class-list *ngIf="tabAtual == 1" [classes]="school.classes"></app-class-list>
+      <app-student-list *ngIf="tabAtual == 2" [students]="getStudents()"></app-student-list>
+   </div>
+</div>

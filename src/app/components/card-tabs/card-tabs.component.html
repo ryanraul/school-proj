@@ -1,0 +1,7 @@
+<div class="card-container">
+   <div class="header">
+      <div class="header-tab" (click)="alterarTab(item.id)" [ngClass]="tabSelecionado == i + 1 ? 'header-tab header-tab-selected' : 'header-tab'" *ngFor="let item of itensTab;let i = index">
+         <b>{{ item.titulo }}</b>
+      </div>
+   </div>
+</div>
